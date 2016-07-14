@@ -7,7 +7,7 @@ var User = require('../api/users/user.model');
 module.exports = new GoogleStrategy({
   clientID: '238524570915-ivf9lnhm9bsfq13cle5ap8s28d4lmhrp.apps.googleusercontent.com',
   clientSecret: 'GST6VQnVmhx1YIB1vDXXB3PF',
-  callbackURL: '/auth/google/callback'
+  callbackURL: 'http://127.0.0.1:8080/auth/google/callback'
 }, function (token, refreshToken,  profile, triggerSerializationOfUser) {
   // this only runs when somebody logs in through google
   User.findOrCreate({
